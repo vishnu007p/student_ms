@@ -1,0 +1,42 @@
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="student_management_system/templates/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Student Registration</h2>
+        <form action="studentreg" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="name">Name:</label>
+            <input type="text" id="sname" name="sname" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="semail" name="semail" required>
+
+            <label for="number">Number:</label>
+            <input type="text" id="snumber" name="snumber" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="sage" name="sage" required>
+
+            <label for="enrollment_date">Enrollment Date:</label>
+            <input type="date" id="senrollment_date" name="senrollment_date" required>
+
+            <label for="course">Select Course:</label>
+            <select id="scourse" name="scourse" required>
+                <option value="python">Python</option>
+                <option value="php">PHP</option>
+            </select>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>
+{% endblock %}

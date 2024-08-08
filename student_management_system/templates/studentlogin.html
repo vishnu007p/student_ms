@@ -1,0 +1,25 @@
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <!-- <link rel="stylesheet" href="./templates/static/css/style.css"> -->
+</head>
+<body>
+    <div class="container">
+        <div class="details-box">
+            <h5 class="card-title">Your Name: {{ sname }}</h5>
+            <h5 class="card-title">Your Email: {{ semail }}</h5>
+            <h5 class="card-title">Your Number: {{ snumber }}</h5>
+            <h5 class="card-title">Your Age: {{ sage }}</h5>
+            <h5 class="card-title">Your Enrollment Date: {{ senrollment_date }}</h5>
+            <h5 class="card-title">Your Course: {{ scourse }}</h5>
+            <a href="{% url 'coursedetails' %}" class="button">Course Details</a>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}
